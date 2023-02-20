@@ -1,15 +1,61 @@
 package Unit;
 
+import Unit.Fighter.bandit;
+import Unit.Fighter.peasent;
+import Unit.Fighter.spearman;
+import Unit.Thrower.cleric;
+import Unit.Thrower.crossbower;
+import Unit.Thrower.sniper;
+import Unit.Thrower.wizzard;
+
+import java.util.ArrayList;
+import java.util.Random;
 public class main {
     public static void main(String[] args) {
-        peasent peasent = new peasent(5,5,2,false,1,1,2,1,5);
-        sniper sniper = new sniper(5,5,2,true,2,3,5,3,10);
-        bandit bandit = new bandit(10,10,2,false,2,4,8,4,15);
-        wizzard wizzard = new wizzard(5,5,2,true,0,4,8,5,30);
-        spearman spearman = new spearman(20,20,2,false,5,5,5,3,20);
-        crossbower crossbower = new crossbower(5,5,1,true,1,4,5,3,20);
-        cleric cleric = new cleric(7,7,2,true,1,3,5,3,15);
+        ArrayList <units> army = new ArrayList<>();
+                for(int i =0 ; i < 10; i++) {
+            int a = new Random().nextInt(7);
+            if (a == 1) {
+                peasent peasent = new peasent();
+                army.add(peasent);
+                System.out.println(peasent.get_Info());
+            }
+            if (a == 2) {
+                sniper sniper = new sniper();
+                army.add(sniper);
+                System.out.println(sniper.get_Info());
+            }
+            if (a == 3) {
+                bandit bandit = new bandit();
+                army.add(bandit);
+                System.out.println(bandit.get_Info());
+            }
+
+            if (a == 4) {
+                wizzard wizzard = new wizzard();
+                army.add(wizzard);
+                System.out.println(wizzard.get_Info());
+            }
+
+            if (a == 5) {
+                spearman spearman = new spearman();
+                army.add(spearman);
+                System.out.println(spearman.get_Info());
+            }
+            if (a == 6) {
+                crossbower crossbower = new crossbower();
+                army.add(crossbower);
+                System.out.println(crossbower.get_Info());
+            }
+            if (a == 7) {
+                cleric cleric = new cleric();
+                army.add(cleric);
+                System.out.println(cleric.get_Info());
+            }
+        }
+        }}
 
 
-    }
-}
+
+
+
